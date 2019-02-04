@@ -14,7 +14,7 @@ export class Entry{
     ){}
 
 
-    static type = {
+    static types = {
         expense: 'Despesa',
         renevue: 'Receita'
     };
