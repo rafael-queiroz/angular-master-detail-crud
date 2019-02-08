@@ -61,7 +61,7 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel> imp
             this.currentAction = 'edit'
     }
 
-    
+
     protected loadResource() {
         if (this.currentAction == 'edit') {
             this.route.paramMap.pipe(
@@ -112,7 +112,7 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel> imp
             )
     }
 
-    
+
     protected actionsForSuccess(resource: T) {
         toastr.success('Solicitação processada com sucesso');
         const baseComponetPath: string = this.route.snapshot.parent.url[0].path;
@@ -132,6 +132,6 @@ export abstract class BaseResourceFormComponent<T extends BaseResourceModel> imp
         else
             this.serverErrorMessages = ['Falha na comunicação com o servidor. Tente mais tarde'];
     }
-    
+
     protected abstract buildResourceForm(): void;
 }
