@@ -4,7 +4,6 @@ import { Validators } from "@angular/forms";
 import { Category } from "../shared/category.model";
 import { CategoryService } from "../shared/category.service";
 import { BaseResourceFormComponent } from 'src/app/shared/components/base-resource-form/base-resource-form.component';
-import { resource } from 'selenium-webdriver/http';
 
 @Component({
   selector: 'app-category-form',
@@ -36,8 +35,8 @@ export class CategoryFormComponent extends BaseResourceFormComponent<Category> {
   }
 
   protected editionPageTitle(): string {
-    const categoryName = this.resource.name || '';
-    return 'Editando categoria: ' + categoryName ;
+    const resourceName = this.resource.name || '';
+    return 'Editando categoria: ' + resourceName ;
   }
 
 }
